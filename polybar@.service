@@ -1,0 +1,10 @@
+[Unit]
+Description=Polybar bar %i
+
+[Service]
+ExecStart=/usr/bin/polybar --config=%i --reload %i
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=hud.target
